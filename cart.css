@@ -344,3 +344,345 @@ body{
 .paypal-btn:hover{
     background-color: #D3D3D3;
 }
+
+
+
+@media screen and (max-width: 1024px){
+    .header{
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 30px 140px;
+        height: 240px;
+        width: 100%;
+        border-bottom: 2px solid #DDDDDD;
+        position: relative;
+        z-index: 1000;
+    }
+    .logo-container{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: fit-content;
+        cursor: pointer;
+    }
+    .logo-container img{
+        width: 94px;
+    }.logo-container p{
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
+    
+    .inner-menu{
+        display: flex;
+        flex-direction: row;
+        gap:44px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .inner-menu p{
+        cursor: pointer;
+    }
+    .inner-menu p:hover{
+        text-decoration: underline 2px solid;
+        text-underline-offset: 6px;
+    }
+    
+    .menu-right-side{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 50px;
+    }
+    #user, #basket{
+        position: relative;
+        cursor: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #user svg{
+        width: 34px;
+        height: 32px;
+        z-index: 10;
+        cursor: pointer;
+    }
+    #basket svg{
+        width: 32px;
+        height: 32px;
+        z-index: 10;
+        cursor: pointer;
+    }
+    #basket a{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 20;
+    }
+    
+    .track-counter{
+        z-index: 10;
+        position: absolute;
+        font-weight: 600;
+        background-color: #D71818;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border-radius: 50%;
+        font-size: 12px;
+        height: 20px;
+        width: 20px;
+        right: 0;
+        top: 0;
+        margin-right: -18px;
+        margin-top: -8px;
+        transition: background-color 0.1s;
+    }
+    
+    .icon-explanation-container{
+        background-color: rgb(196, 196, 196);
+        color: black;
+        margin-top: 130px;
+        margin-left: -30px;
+        font-size: 14px;
+        font-weight: 500;
+        position: absolute;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        width: 80px;
+        border-radius: 6px;
+        opacity: 0;
+        transition: opacity 0.1s;
+    }
+    
+    .icon-circle{
+        opacity: 0;
+        border-radius: 50%;
+        background-color: #f1f1f1;
+        position: absolute;
+        z-index: 1;
+        transition: opacity 0.1s;
+        display: none;
+    }
+    
+    .icon-container:hover .track-counter{
+        background-color: black;
+    }
+    .icon-container:hover .icon-circle{
+        animation-name: icon-circle;
+        animation-duration: 0.1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-duration: alternate;
+        opacity: 1;
+        display: inline;
+    }
+    .icon-container:hover .icon-explanation-container{
+        animation-name: icon-text;
+        animation-duration: 0.1s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-duration: alternate;
+        display: flex;
+        opacity: 1;
+    }
+    
+    @keyframes icon-text{
+        25% {margin-top: 130px;}
+        50% {margin-top: 134px;}
+        75% {margin-top: 138px;}
+        100% {margin-top: 142px;}
+    }
+    @keyframes icon-circle{
+        25% {height: 10px; width: 10px;}
+        50% {height: 20px; width: 20px;}
+        75% {height: 40px; width: 40px;}
+        100% {height: 60px; width: 60px;}
+    }
+    
+    
+    .bag-title{
+        font-size: 35px;
+        font-weight: bold;
+        margin-left: 140px;
+        margin-top: 60px;
+    }
+    .bag-section-body{
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 60px;
+        padding: 0px 140px;
+        padding-bottom: 140px;
+        width: 100%;
+    }
+    .left-side-list{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .bag-item{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding: 40px 30px;
+        border: 1px solid #D3D3D3;
+        border-radius: 6px;
+        width: 100%;
+    }
+    .checkout-img{
+        width: 124px;
+        height: 196px;
+        border-radius: 6px;
+    }
+    .item-right-side{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .right-side-upper-row{
+        display:flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        gap: 20px;
+    }
+    .right-side-upper-row h1{
+        font-size: 34px;
+        font-weight: 600;
+    }
+    .right-side-upper-row p{
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .deletebtn{
+        font-size: 18px;
+        font-weight: 500;
+        border: 1px solid black;
+        padding: 6px 20px;
+        background-color: white;
+        cursor: pointer;
+        width: fit-content;
+        border-radius: 6px;
+        transition: background-color 0.1s;
+    }
+    .deletebtn:hover{
+        background-color: red;
+        color: white;
+        border: 1px solid red;
+    }
+    
+    
+    
+    .list-summary{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .list-summary img{
+        width: 80px;
+    }
+    .summary-title{
+        font-size: 35px;
+        font-weight: 500;
+    }
+    .list-summary h2{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .list-summary p{
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .summary-body{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+    .group{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+    .input-container{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+    }
+    .input-container input{
+        outline:none;
+        border: 1px solid hsla(0, 0%, 27%, 0.6);
+        height: 40px;
+        width: 200px;
+        border-radius: 6px;
+        padding: 0px 20px;
+        font-size: 16px;
+        font-weight: 500;
+        color: black;
+    }
+    .summary-btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 500;
+        color:#a5a5a5;
+        border: 1px solid hsla(0, 0%, 27%, 0.6);
+        height: 40px;
+        border-radius: 6px;
+        width: 90px;
+        cursor: pointer;
+        transition: color 0.1s, background-color 0.1s, border 0.1s
+    }
+    .summary-btn:hover{
+        background-color: lightgrey;
+        color: black;
+        border: 1px solid lightgrey;
+    }
+    .row-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .total-container{
+        border-top: 1px solid  #D3D3D3;
+        border-bottom: 1px solid #D3D3D3;
+        padding: 30px 0px;
+    }
+    .group button{
+        background-color: black;
+        color: white;
+        font-weight: 500;
+        font-size: 18px;
+        height: 56px;
+        width: 100%;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+    .paypal-btn{
+        height: 56px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        border: 1px solid #D3D3D3;
+        background-color: #F6F6F6;
+        cursor: pointer;
+        transition:background-color 0.1s;
+    }
+    .paypal-btn:hover{
+        background-color: #D3D3D3;
+    }
+}
