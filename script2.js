@@ -1,11 +1,18 @@
 const ITEMS = document.querySelector('.ITEMS');
 ITEMS.innerHTML += JSON.parse(localStorage.getItem('List'))
 
+console.log(localStorage.getItem('totalPrice') === null)
 
 let DOMprice = document.querySelector('.subtotal')
-DOMprice.textContent = '$'+ localStorage.getItem('totalPrice');
 let DOMtotalPrice = document.querySelector('.total')
-DOMtotalPrice.textContent = '$'+ localStorage.getItem('totalPrice');
+
+if(localStorage.getItem('totalPrice') === null){
+    DOMprice.textContent = '$'+ 0;
+    DOMtotalPrice.textContent = '$'+ 0;
+} else {
+    DOMprice.textContent = '$'+ localStorage.getItem('totalPrice');
+    DOMtotalPrice.textContent = '$'+ localStorage.getItem('totalPrice');
+}
 
 numberOfItems = localStorage.getItem('localTrack');
 

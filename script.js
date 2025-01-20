@@ -137,20 +137,7 @@ addBtn.forEach(btn => btn.addEventListener('click', ()=>{
     bagCounter.parentElement.style.display = 'flex'
 
 
-    let itemObj = {
-        name: '',
-        price: 0,
-        imageUrl: '',
-    };
-    itemObj.name = btn.parentElement.parentElement.previousElementSibling.textContent;
-    itemObj.price = btn.parentElement.previousElementSibling.textContent;
-    itemObj.imageUrl = btn.parentElement.parentElement.parentElement.previousElementSibling.firstElementChild.src;
 
-
-    
-    mainArr.push(itemObj);
-    localStorage.setItem('ARR', JSON.stringify(mainArr))
-    console.log(JSON.parse(localStorage.getItem('ARR')))
 
     let div = document.createElement('div');
     div.className = 'bag-item'
